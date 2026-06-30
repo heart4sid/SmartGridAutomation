@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+playwright
+openpyxl
+sqlalchemy
+python-multipart

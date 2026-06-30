@@ -977,7 +977,7 @@
             list.innerHTML = jobs.map(j => {
                 const statusClass = `hi-status-${j.status.toLowerCase()}`;
                 const pct = j.total_records > 0 ? Math.round((j.processed_records / j.total_records) * 100) : 0;
-                const dateStr = j.created_at ? new Date(j.created_at).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) : '';
+                const dateStr = j.created_at ? new Date(j.created_at).toLocaleString('en-IN', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) : '';
                 return `<div class="history-item" onclick="loadJob('${j.job_id}')">
                     <span class="hi-society">${j.society_name || 'Unknown'}</span>
                     <span class="hi-progress">${j.successful}/${j.total_records} • ${dateStr}</span>
